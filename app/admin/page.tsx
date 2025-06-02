@@ -1,29 +1,44 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Plus, Edit, Trash2, Eye, FileText, Calendar, Search, ArrowLeft } from "lucide-react"
-import Link from "next/link"
-import { MarkdownEditor } from "@/components/markdown-editor"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Plus,
+  Edit,
+  Trash2,
+  Eye,
+  FileText,
+  Calendar,
+  Search,
+  ArrowLeft,
+} from "lucide-react";
+import Link from "next/link";
+import { MarkdownEditor } from "@/components/markdown-editor";
 
 interface BlogPost {
-  id: string
-  title: string
-  slug: string
-  excerpt: string
-  content: string
-  category: string
-  tags: string[]
-  status: "draft" | "published"
-  createdAt: string
-  updatedAt: string
-  readTime: number
-  views: number
-  featuredImage?: string
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  tags: string[];
+  status: "draft" | "published";
+  createdAt: string;
+  updatedAt: string;
+  readTime: number;
+  views: number;
+  featuredImage?: string;
 }
 
 export default function AdminPanel() {
@@ -69,19 +84,19 @@ Uma das maiores preocupações de quem quer aproveitar as oportunidades do Brás
       slug: "goiania-capital-goiana",
       excerpt:
         "Descubra as principais atrações, pontos turísticos e oportunidades de negócio na moderna capital de Goiás.",
-      content: `# Goiânia: O Que Fazer na Capital Goiana
+      content: `# Goiânia: Compras no Mega Moda Park
 
-Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquitetura moderna, áreas verdes abundantes e qualidade de vida excepcional.
+Goiânia é um dos principais destinos de compras do Brasil, e o Shopping Mega Moda Park é um verdadeiro paraíso para lojistas e compradores em busca das últimas tendências da moda.
 
-## Principais Atrações
+## Sobre o Shopping
 
-- **Parque Vaca Brava**: Área de lazer no coração da cidade
-- **Setor Bueno**: Centro comercial e gastronômico
-- **Feira da Lua**: Artesanato e cultura local
+- **Localização Privilegiada**: No coração do polo da moda de Goiânia
+- **Variedade Incomparável**: Centenas de lojas com as últimas tendências
+- **Preços Competitivos**: Direto dos fabricantes para você
 
 ## Como Chegar
 
-**Toda sexta-feira** há viagens organizadas saindo de Araguari direto para Goiânia.`,
+**Toda sexta-feira** organizamos viagens saindo de Araguari às 23:30, direto para o Shopping Mega Moda Park em Goiânia. Uma oportunidade imperdível para fazer excelentes compras!`,
       category: "destino",
       tags: ["goiânia", "turismo", "capital"],
       status: "draft",
@@ -90,34 +105,41 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
       readTime: 5,
       views: 0,
     },
-  ])
+  ]);
 
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null)
-  const [isEditing, setIsEditing] = useState(false)
-  const [searchTerm, setSearchTerm] = useState("")
-  const [filterCategory, setFilterCategory] = useState("all")
-  const [filterStatus, setFilterStatus] = useState("all")
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterCategory, setFilterCategory] = useState("all");
+  const [filterStatus, setFilterStatus] = useState("all");
 
-  const categories = ["guia", "destino", "dicas", "negócios"]
-  const statuses = ["draft", "published"]
+  const categories = ["guia", "destino", "dicas", "negócios"];
+  const statuses = ["draft", "published"];
 
   const filteredPosts = posts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = filterCategory === "all" || post.category === filterCategory
-    const matchesStatus = filterStatus === "all" || post.status === filterStatus
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      filterCategory === "all" || post.category === filterCategory;
+    const matchesStatus =
+      filterStatus === "all" || post.status === filterStatus;
 
-    return matchesSearch && matchesCategory && matchesStatus
-  })
+    return matchesSearch && matchesCategory && matchesStatus;
+  });
 
   const handleSavePost = (updatedPost: BlogPost) => {
     if (selectedPost) {
       setPosts(
         posts.map((post) =>
-          post.id === selectedPost.id ? { ...updatedPost, updatedAt: new Date().toISOString().split("T")[0] } : post,
+          post.id === selectedPost.id
+            ? {
+                ...updatedPost,
+                updatedAt: new Date().toISOString().split("T")[0],
+              }
+            : post,
         ),
-      )
+      );
     } else {
       const newPost: BlogPost = {
         ...updatedPost,
@@ -125,26 +147,26 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
         createdAt: new Date().toISOString().split("T")[0],
         updatedAt: new Date().toISOString().split("T")[0],
         views: 0,
-      }
-      setPosts([newPost, ...posts])
+      };
+      setPosts([newPost, ...posts]);
     }
-    setSelectedPost(null)
-    setIsEditing(false)
-  }
+    setSelectedPost(null);
+    setIsEditing(false);
+  };
 
   const handleDeletePost = (postId: string) => {
-    setPosts(posts.filter((post) => post.id !== postId))
-  }
+    setPosts(posts.filter((post) => post.id !== postId));
+  };
 
   const handleNewPost = () => {
-    setSelectedPost(null)
-    setIsEditing(true)
-  }
+    setSelectedPost(null);
+    setIsEditing(true);
+  };
 
   const handleEditPost = (post: BlogPost) => {
-    setSelectedPost(post)
-    setIsEditing(true)
-  }
+    setSelectedPost(post);
+    setIsEditing(true);
+  };
 
   if (isEditing) {
     return (
@@ -152,11 +174,11 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
         post={selectedPost}
         onSave={handleSavePost}
         onCancel={() => {
-          setIsEditing(false)
-          setSelectedPost(null)
+          setIsEditing(false);
+          setSelectedPost(null);
         }}
       />
-    )
+    );
   }
 
   return (
@@ -173,11 +195,16 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                 </Button>
               </Link>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Painel Administrativo</h1>
+                <h1 className="text-2xl font-bold text-gray-900">
+                  Painel Administrativo
+                </h1>
                 <p className="text-sm text-gray-600">Gerenciar posts do blog</p>
               </div>
             </div>
-            <Button onClick={handleNewPost} className="bg-blue-600 hover:bg-blue-700">
+            <Button
+              onClick={handleNewPost}
+              className="bg-blue-600 hover:bg-blue-700"
+            >
               <Plus className="w-4 h-4 mr-2" />
               Novo Post
             </Button>
@@ -195,8 +222,12 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                   <FileText className="w-6 h-6 text-blue-600" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Total de Posts</p>
-                  <p className="text-2xl font-bold text-gray-900">{posts.length}</p>
+                  <p className="text-sm font-medium text-gray-600">
+                    Total de Posts
+                  </p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {posts.length}
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -209,7 +240,9 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                   <Eye className="w-6 h-6 text-green-600" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Publicados</p>
+                  <p className="text-sm font-medium text-gray-600">
+                    Publicados
+                  </p>
                   <p className="text-2xl font-bold text-gray-900">
                     {posts.filter((p) => p.status === "published").length}
                   </p>
@@ -226,7 +259,9 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                 </div>
                 <div className="ml-4">
                   <p className="text-sm font-medium text-gray-600">Rascunhos</p>
-                  <p className="text-2xl font-bold text-gray-900">{posts.filter((p) => p.status === "draft").length}</p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {posts.filter((p) => p.status === "draft").length}
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -239,9 +274,13 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                   <Eye className="w-6 h-6 text-purple-600" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">Total Views</p>
+                  <p className="text-sm font-medium text-gray-600">
+                    Total Views
+                  </p>
                   <p className="text-2xl font-bold text-gray-900">
-                    {posts.reduce((sum, post) => sum + post.views, 0).toLocaleString()}
+                    {posts
+                      .reduce((sum, post) => sum + post.views, 0)
+                      .toLocaleString()}
                   </p>
                 </div>
               </div>
@@ -305,8 +344,14 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                 >
                   <div className="flex-1">
                     <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-lg font-semibold text-gray-900">{post.title}</h3>
-                      <Badge variant={post.status === "published" ? "default" : "secondary"}>
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {post.title}
+                      </h3>
+                      <Badge
+                        variant={
+                          post.status === "published" ? "default" : "secondary"
+                        }
+                      >
                         {post.status === "published" ? "Publicado" : "Rascunho"}
                       </Badge>
                       <Badge variant="outline">{post.category}</Badge>
@@ -325,7 +370,11 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Button variant="ghost" size="sm" onClick={() => handleEditPost(post)}>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => handleEditPost(post)}
+                    >
                       <Edit className="w-4 h-4" />
                     </Button>
                     <Button
@@ -349,5 +398,5 @@ Goiânia é uma das capitais mais planejadas do Brasil, conhecida por sua arquit
         </Card>
       </div>
     </div>
-  )
+  );
 }

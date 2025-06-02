@@ -347,7 +347,7 @@ export default function ElianeturismoLanding() {
             <div className="relative mt-8 lg:mt-0">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="/logo.png"
                   alt="Ônibus moderno organizado pela Eliane Turismo"
                   width={600}
                   height={500}
@@ -794,7 +794,7 @@ export default function ElianeturismoLanding() {
                 <div className="text-left">
                   <p className="text-sm text-gray-500">Novo WhatsApp</p>
                   <p className="text-xl font-bold text-gray-900">
-                    (34) 98888-7777
+                    (34) 9 9236-9984
                   </p>
                 </div>
               </div>
