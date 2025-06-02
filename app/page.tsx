@@ -246,7 +246,7 @@ export default function ElianeturismoLanding() {
                 </span>
                 <br />
                 <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700">
-                  São Paulo, Goiânia e Monte Sião
+                  São Paulo e Goiânia
                 </span>
               </h1>
 
