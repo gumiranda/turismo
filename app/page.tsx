@@ -601,10 +601,21 @@ export default function ElianeturismoLanding() {
                     Todo Domingo
                   </Badge>
                 </div>
-                <p className="text-gray-600">
-                  Saída de Araguari com destino ao maior centro de compras do
-                  Brasil.
-                </p>
+                <div className="space-y-2">
+                  <p className="text-gray-600">
+                    <strong>Saída:</strong> Araguari às 15:30
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>Parada especial:</strong> Feirinha da Madrugada
+                    (plataforma e2e67)
+                  </p>
+                  <p className="text-gray-600">
+                    <strong>Retorno:</strong> 14:00 do dia seguinte
+                  </p>
+                  <p className="text-sm text-blue-600 font-medium mt-3">
+                    Destino ao maior centro de compras do Brasil!
+                  </p>
+                </div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-600">
                 <div className="flex items-center justify-between mb-4">
