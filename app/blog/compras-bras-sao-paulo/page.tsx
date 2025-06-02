@@ -173,7 +173,7 @@ export default function ComprasBrasArticle() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=800"
+                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=400"
                 alt="Centro comercial do Brás em São Paulo"
                 width={800}
                 height={400}
@@ -605,7 +605,7 @@ export default function ComprasBrasArticle() {
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
                     alt="Dicas de viagem"
                     width={300}
                     height={200}
@@ -633,7 +633,7 @@ export default function ComprasBrasArticle() {
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="https://www.goiania.go.gov.br/wp-content/uploads/2019/10/10.28GOIANIAGERAL_PJ-1-1024x569.jpeg"
                     alt="Goiânia"
                     width={300}
                     height={200}
@@ -661,7 +661,7 @@ export default function ComprasBrasArticle() {
               <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
                     alt="Empreendedorismo"
                     width={300}
                     height={200}

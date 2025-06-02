@@ -1397,7 +1397,7 @@ export default function ElianeturismoLanding() {
                   </div>
                   <div>
                     <p className="text-sm font-medium">WhatsApp</p>
-                    <p className="text-xs">(34) 99999-9999</p>
+                    <p className="text-xs">(34) 99236-9984</p>
                   </div>
                 </Link>
                 <div className="flex items-center text-gray-400">
@@ -1406,7 +1406,7 @@ export default function ElianeturismoLanding() {
                   </div>
                   <div>
                     <p className="text-sm font-medium">Telefone</p>
-                    <p className="text-xs">(34) 3333-3333</p>
+                    <p className="text-xs">(34) 3242-5595</p>
                   </div>
                 </div>
                 <div className="flex items-center text-gray-400">
