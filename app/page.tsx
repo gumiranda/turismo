@@ -393,7 +393,7 @@ export default function ElianeturismoLanding() {
                 <Award className="w-6 h-6 md:w-8 md:h-8 text-purple-600" />
               </div>
               <div className="text-2xl md:text-3xl font-bold text-gray-900">
-                5
+                15
               </div>
               <div className="text-sm md:text-base text-gray-600">
                 Anos de Experiência
@@ -431,7 +431,7 @@ export default function ElianeturismoLanding() {
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               A Eliane cuida de todos os detalhes da sua viagem com carinho e
-              profissionalismo. Mais de 5 anos organizando viagens com
+              profissionalismo. Mais de 15 anos organizando viagens com
               excelência.
             </p>
           </div>
