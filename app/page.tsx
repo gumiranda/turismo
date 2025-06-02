@@ -38,7 +38,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-export const whatsappNumber = "5534988887777"; // Novo número - atualizado recentemente!
+export const whatsappNumber = "5534992369984"; // Novo número - atualizado recentemente!
 
 export default function ElianeturismoLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
