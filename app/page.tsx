@@ -542,6 +542,85 @@ export default function ElianeturismoLanding() {
           </div>
         </div>
       </section>
+      {/* Banners Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Ofertas Especiais
+            </h2>
+            <p className="text-blue-100 text-lg">
+              Aproveite nossas promoções exclusivas para viagens
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+              <Image
+                src="/a.jpeg"
+                alt="Promoção especial de viagem"
+                width={600}
+                height={600}
+                className="w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                    Viagens para São Paulo
+                  </h3>
+                  <p className="text-gray-200 mb-4">
+                    Descubra as melhores oportunidades de compras no Brás
+                  </p>
+                  <Link
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      "Olá Eliane! Vi a promoção para São Paulo e gostaria de mais informações!",
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-white text-blue-600 hover:bg-gray-100 transition-colors">
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Saiba Mais
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+              <Image
+                src="/b.jpeg"
+                alt="Promoção especial de viagem"
+                width={600}
+                height={600}
+                className="w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                    Viagens para Goiânia
+                  </h3>
+                  <p className="text-gray-200 mb-4">
+                    Explore o Mega Moda Park e as melhores lojas da região
+                  </p>
+                  <Link
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      "Olá Eliane! Vi a promoção para Goiânia e gostaria de mais informações!",
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-white text-purple-600 hover:bg-gray-100 transition-colors">
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Saiba Mais
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Destinations Section */}
       <section id="destinos" className="py-16 md:py-20 bg-white">
