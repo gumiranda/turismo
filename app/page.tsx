@@ -795,12 +795,12 @@ export default function ElianeturismoLanding() {
               <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-blue-600 rounded-full"></div>
-                <span className="font-medium text-gray-900">Uberaba</span>
+                <span className="font-medium text-gray-900">Uberlândia</span>
               </div>
               <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-purple-600 rounded-full"></div>
-                <span className="font-medium text-gray-900">Uberlândia</span>
+                <span className="font-medium text-gray-900">Uberaba</span>
               </div>
               <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
               <div className="flex items-center space-x-2">
@@ -812,7 +812,7 @@ export default function ElianeturismoLanding() {
               <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-red-600 rounded-full"></div>
-                <span className="font-medium text-gray-900">Destino Final</span>
+                <span className="font-medium text-gray-900">São Paulo</span>
               </div>
             </div>
           </div>
