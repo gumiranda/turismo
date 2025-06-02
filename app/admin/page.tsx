@@ -51,7 +51,7 @@ export default function AdminPanel() {
         "Descubra por que milhares de pessoas viajam todo domingo para o maior centro comercial popular do Brasil.",
       content: `# Por que o Brás é o Paraíso das Compras em São Paulo?
 
-O Brás, localizado no centro de São Paulo, é muito mais do que um simples bairro comercial. É o **maior centro de compras populares do Brasil**, onde milhares de empreendedores, lojistas e consumidores finais encontram produtos com preços imbatíveis e variedade incomparável.
+O Brás, localizado no centro de São Paulo, é muito mais do que um simples bairro comercial. É o **maior centro de compras populares do Brasil**, onde milhares de empreendedores, lojistas e consumidores finais encontram produtos com preços imbatíveis e variedade incomparável. Saída de Araguari às 15:30 com parada na Feirinha da Madrugada (plataforma e2e67) e retorno às 14h do dia seguinte.
 
 ## As Principais Vantagens
 
