@@ -1253,13 +1253,13 @@ export default function ElianeturismoLanding() {
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  5+
+                  15+
                 </div>
                 <div className="text-sm text-blue-100">Anos de Experiência</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  500+
+                  5000+
                 </div>
                 <div className="text-sm text-blue-100">
                   Clientes Satisfeitos
