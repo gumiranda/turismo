@@ -1404,7 +1404,9 @@ export default function ElianeturismoLanding() {
                   </div>
                   <div>
                     <p className="text-sm font-medium">Localização</p>
-                    <p className="text-xs">Araguari - MG, Brasil</p>
+                    <p className="text-xs">Rua Elias Peixoto, Nº 552, Centro</p>
+                    <p className="text-xs">Araguari - MG, CEP 38440-256</p>
+                    <p className="text-xs mt-1">CNPJ: 22.810.673/0001-40</p>
                   </div>
                 </div>
               </div>
