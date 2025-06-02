@@ -586,6 +586,45 @@ export default function ElianeturismoLanding() {
             </p>
           </div>
 
+          <div className="mb-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 md:p-8 shadow-lg border border-blue-100">
+            <h3 className="text-2xl font-bold text-center text-blue-800 mb-6">
+              Horários Garantidos
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <Clock className="w-6 h-6 text-blue-600 mr-2" />
+                    <h4 className="text-xl font-semibold">São Paulo (Brás)</h4>
+                  </div>
+                  <Badge className="bg-blue-100 text-blue-800">
+                    Todo Domingo
+                  </Badge>
+                </div>
+                <p className="text-gray-600">
+                  Saída de Araguari com destino ao maior centro de compras do
+                  Brasil.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-600">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center">
+                    <Clock className="w-6 h-6 text-purple-600 mr-2" />
+                    <h4 className="text-xl font-semibold">
+                      Goiânia (Mega Moda)
+                    </h4>
+                  </div>
+                  <Badge className="bg-purple-100 text-purple-800">
+                    Toda Sexta 23:30
+                  </Badge>
+                </div>
+                <p className="text-gray-600">
+                  Saída de Araguari direto para o Shopping Mega Moda Park.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
               <div className="relative overflow-hidden">
