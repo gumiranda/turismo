@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   MapPin,
   Clock,
@@ -34,24 +34,25 @@ import {
   Package,
   TrendingUp,
   Eye,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useState, useEffect } from "react"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+export const whatsappNumber = "5534988887777"; // Novo número - atualizado recentemente!
 
 export default function ElianeturismoLanding() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeTestimonial, setActiveTestimonial] = useState(0)
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const testimonials = [
     {
@@ -78,7 +79,7 @@ export default function ElianeturismoLanding() {
       rating: 5,
       image: "/placeholder.svg?height=60&width=60",
     },
-  ]
+  ];
 
   const faqs = [
     {
@@ -101,17 +102,19 @@ export default function ElianeturismoLanding() {
       answer:
         "Sim, entre em contato com a Eliane pelo WhatsApp para verificar as condições de cancelamento de acordo com a antecedência.",
     },
-  ]
+  ];
 
-  const whatsappNumber = "5534988887777" // Novo número - atualizado recentemente!
-  const whatsappMessage = "Olá Eliane! Vi seu site e gostaria de informações sobre as viagens. É o novo número mesmo?"
+  const whatsappMessage =
+    "Olá Eliane! Vi seu site e gostaria de informações sobre as viagens. É o novo número mesmo?";
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Header */}
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white/90 backdrop-blur-sm"
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-lg"
+            : "bg-white/90 backdrop-blur-sm"
         }`}
       >
         <div className="container mx-auto px-4 py-3 md:py-4">
@@ -127,7 +130,9 @@ export default function ElianeturismoLanding() {
                 <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Eliane Turismo
                 </span>
-                <p className="text-xs text-gray-500 hidden md:block">Organizadora de Viagens</p>
+                <p className="text-xs text-gray-500 hidden md:block">
+                  Organizadora de Viagens
+                </p>
               </div>
             </div>
 
@@ -173,7 +178,9 @@ export default function ElianeturismoLanding() {
             {/* WhatsApp Button & Mobile Menu */}
             <div className="flex items-center space-x-3">
               <Link
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                  whatsappMessage,
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -183,8 +190,17 @@ export default function ElianeturismoLanding() {
                 </Button>
               </Link>
 
-              <Button variant="ghost" size="sm" className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Button
+                variant="ghost"
+                size="sm"
+                className="lg:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </Button>
             </div>
           </div>
@@ -262,9 +278,10 @@ export default function ElianeturismoLanding() {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                <strong>Eliane organiza suas viagens</strong> com horários fixos e garantidos:{" "}
-                <strong>São Paulo (Brás) todo domingo</strong> e <strong>Goiânia toda sexta-feira</strong>. Ônibus
-                modernos, lugares garantidos e atendimento personalizado no nosso{" "}
+                <strong>Eliane organiza suas viagens</strong> com horários fixos
+                e garantidos: <strong>São Paulo (Brás) todo domingo</strong> e{" "}
+                <strong>Goiânia toda sexta-feira</strong>. Ônibus modernos,
+                lugares garantidos e atendimento personalizado no nosso{" "}
                 <strong>novo número do WhatsApp</strong>.
               </p>
 
@@ -272,15 +289,21 @@ export default function ElianeturismoLanding() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-lg mx-auto lg:mx-0">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-sm text-gray-700">Atendimento 24h no WhatsApp</span>
+                  <span className="text-sm text-gray-700">
+                    Atendimento 24h no WhatsApp
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-sm text-gray-700">Ônibus com ar condicionado</span>
+                  <span className="text-sm text-gray-700">
+                    Ônibus com ar condicionado
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-sm text-gray-700">Horários flexíveis</span>
+                  <span className="text-sm text-gray-700">
+                    Horários flexíveis
+                  </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
@@ -290,7 +313,9 @@ export default function ElianeturismoLanding() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                    whatsappMessage,
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -307,7 +332,11 @@ export default function ElianeturismoLanding() {
                   size="lg"
                   variant="outline"
                   className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 transition-all duration-300"
-                  onClick={() => document.getElementById("destinos")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() =>
+                    document
+                      .getElementById("destinos")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   <Navigation className="w-5 h-5 mr-2" />
                   Ver Destinos
@@ -332,8 +361,12 @@ export default function ElianeturismoLanding() {
                       <Shield className="w-5 h-5 md:w-6 md:h-6 text-green-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm md:text-base">100% Seguro</p>
-                      <p className="text-xs md:text-sm text-gray-600">Viagens protegidas</p>
+                      <p className="font-semibold text-gray-900 text-sm md:text-base">
+                        100% Seguro
+                      </p>
+                      <p className="text-xs md:text-sm text-gray-600">
+                        Viagens protegidas
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -344,8 +377,12 @@ export default function ElianeturismoLanding() {
                       <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-xs md:text-sm">WhatsApp</p>
-                      <p className="text-xs text-gray-600">Atendimento direto</p>
+                      <p className="font-semibold text-gray-900 text-xs md:text-sm">
+                        WhatsApp
+                      </p>
+                      <p className="text-xs text-gray-600">
+                        Atendimento direto
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -363,36 +400,53 @@ export default function ElianeturismoLanding() {
               <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Users className="w-6 h-6 md:w-8 md:h-8 text-blue-600" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-gray-900">500+</div>
-              <div className="text-sm md:text-base text-gray-600">Clientes Satisfeitos</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                500+
+              </div>
+              <div className="text-sm md:text-base text-gray-600">
+                Clientes Satisfeitos
+              </div>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 <MapPin className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-gray-900">15+</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                15+
+              </div>
               <div className="text-sm md:text-base text-gray-600">Destinos</div>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Award className="w-6 h-6 md:w-8 md:h-8 text-purple-600" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-gray-900">5</div>
-              <div className="text-sm md:text-base text-gray-600">Anos de Experiência</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                5
+              </div>
+              <div className="text-sm md:text-base text-gray-600">
+                Anos de Experiência
+              </div>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
                 <Heart className="w-6 h-6 md:w-8 md:h-8 text-orange-600" />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-gray-900">98%</div>
-              <div className="text-sm md:text-base text-gray-600">Recomendação</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-900">
+                98%
+              </div>
+              <div className="text-sm md:text-base text-gray-600">
+                Recomendação
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="servicos" className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section
+        id="servicos"
+        className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <Badge className="mb-4 bg-blue-100 text-blue-800 px-4 py-2">
@@ -403,8 +457,9 @@ export default function ElianeturismoLanding() {
               Por que escolher a <span className="text-blue-600">Eliane</span>?
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              A Eliane cuida de todos os detalhes da sua viagem com carinho e profissionalismo. Mais de 5 anos
-              organizando viagens com excelência.
+              A Eliane cuida de todos os detalhes da sua viagem com carinho e
+              profissionalismo. Mais de 5 anos organizando viagens com
+              excelência.
             </p>
           </div>
 
@@ -414,10 +469,12 @@ export default function ElianeturismoLanding() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Atendimento WhatsApp</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Atendimento WhatsApp
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Fale diretamente com a Eliane pelo WhatsApp. Atendimento rápido, personalizado e disponível quando
-                  você precisar.
+                  Fale diretamente com a Eliane pelo WhatsApp. Atendimento
+                  rápido, personalizado e disponível quando você precisar.
                 </p>
               </CardContent>
             </Card>
@@ -427,10 +484,13 @@ export default function ElianeturismoLanding() {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Horários Flexíveis</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Horários Flexíveis
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Saídas regulares de Araguari com paradas em Uberaba, Uberlândia e Ribeirão Preto. Horários que se
-                  adaptam à sua necessidade.
+                  Saídas regulares de Araguari com paradas em Uberaba,
+                  Uberlândia e Ribeirão Preto. Horários que se adaptam à sua
+                  necessidade.
                 </p>
               </CardContent>
             </Card>
@@ -440,10 +500,12 @@ export default function ElianeturismoLanding() {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Viagem Segura</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Viagem Segura
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Ônibus modernos, motoristas experientes e seguro de viagem. Sua segurança é nossa prioridade número
-                  um.
+                  Ônibus modernos, motoristas experientes e seguro de viagem.
+                  Sua segurança é nossa prioridade número um.
                 </p>
               </CardContent>
             </Card>
@@ -453,9 +515,12 @@ export default function ElianeturismoLanding() {
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Preços Justos</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Preços Justos
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Valores transparentes e competitivos. A Eliane sempre busca as melhores condições para seus clientes.
+                  Valores transparentes e competitivos. A Eliane sempre busca as
+                  melhores condições para seus clientes.
                 </p>
               </CardContent>
             </Card>
@@ -471,25 +536,33 @@ export default function ElianeturismoLanding() {
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <AirVent className="w-6 h-6 text-blue-600" />
                 </div>
-                <p className="text-sm font-medium text-gray-700">Ar Condicionado</p>
+                <p className="text-sm font-medium text-gray-700">
+                  Ar Condicionado
+                </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Wifi className="w-6 h-6 text-green-600" />
                 </div>
-                <p className="text-sm font-medium text-gray-700">Wi-Fi Gratuito</p>
+                <p className="text-sm font-medium text-gray-700">
+                  Wi-Fi Gratuito
+                </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Coffee className="w-6 h-6 text-purple-600" />
                 </div>
-                <p className="text-sm font-medium text-gray-700">Poltronas Reclináveis</p>
+                <p className="text-sm font-medium text-gray-700">
+                  Poltronas Reclináveis
+                </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Headphones className="w-6 h-6 text-orange-600" />
                 </div>
-                <p className="text-sm font-medium text-gray-700">Entretenimento</p>
+                <p className="text-sm font-medium text-gray-700">
+                  Entretenimento
+                </p>
               </div>
             </div>
           </div>
@@ -508,7 +581,8 @@ export default function ElianeturismoLanding() {
               Principais <span className="text-green-600">Destinos</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Partindo de Araguari para os melhores destinos do Brasil. A Eliane organiza sua viagem com todo cuidado.
+              Partindo de Araguari para os melhores destinos do Brasil. A Eliane
+              organiza sua viagem com todo cuidado.
             </p>
           </div>
 
@@ -529,10 +603,13 @@ export default function ElianeturismoLanding() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">Monte Sião - MG</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
+                  Monte Sião - MG
+                </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Águas termais e paisagens deslumbrantes da Serra da Mantiqueira. Destino perfeito para relaxar e
-                  renovar as energias.
+                  Águas termais e paisagens deslumbrantes da Serra da
+                  Mantiqueira. Destino perfeito para relaxar e renovar as
+                  energias.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
@@ -540,7 +617,9 @@ export default function ElianeturismoLanding() {
                     <span>4h de viagem</span>
                   </div>
                   <Link
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá Eliane! Gostaria de informações sobre viagens para Monte Sião.")}`}
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      "Olá Eliane! Gostaria de informações sobre viagens para Monte Sião.",
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -572,10 +651,13 @@ export default function ElianeturismoLanding() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">São Paulo - Brás</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
+                  São Paulo - Brás
+                </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  <strong>Todo domingo</strong> direto para o coração comercial de SP! O Brás oferece as melhores
-                  oportunidades de compras com preços imbatíveis.
+                  <strong>Todo domingo</strong> direto para o coração comercial
+                  de SP! O Brás oferece as melhores oportunidades de compras com
+                  preços imbatíveis.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
@@ -583,7 +665,9 @@ export default function ElianeturismoLanding() {
                     <span>Domingos - 6h viagem</span>
                   </div>
                   <Link
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá Eliane! Gostaria de informações sobre viagens para São Paulo.")}`}
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      "Olá Eliane! Gostaria de informações sobre viagens para São Paulo.",
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -615,10 +699,13 @@ export default function ElianeturismoLanding() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">Goiânia - GO</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">
+                  Goiânia - GO
+                </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  <strong>Toda sexta-feira</strong> para a capital planejada! Cidade verde, moderna e com excelente
-                  infraestrutura para negócios e turismo.
+                  <strong>Toda sexta-feira</strong> para a capital planejada!
+                  Cidade verde, moderna e com excelente infraestrutura para
+                  negócios e turismo.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
@@ -626,7 +713,9 @@ export default function ElianeturismoLanding() {
                     <span>Sextas - 3h viagem</span>
                   </div>
                   <Link
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá Eliane! Gostaria de informações sobre viagens para Goiânia.")}`}
+                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                      "Olá Eliane! Gostaria de informações sobre viagens para Goiânia.",
+                    )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -645,7 +734,9 @@ export default function ElianeturismoLanding() {
 
           {/* Route Map */}
           <div className="mt-12 md:mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 md:p-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">Rota das Viagens</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">
+              Rota das Viagens
+            </h3>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-green-600 rounded-full"></div>
@@ -664,7 +755,9 @@ export default function ElianeturismoLanding() {
               <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
               <div className="flex items-center space-x-2">
                 <div className="w-4 h-4 bg-orange-600 rounded-full"></div>
-                <span className="font-medium text-gray-900">Ribeirão Preto</span>
+                <span className="font-medium text-gray-900">
+                  Ribeirão Preto
+                </span>
               </div>
               <ArrowRight className="w-6 h-6 text-gray-400 rotate-90 md:rotate-0" />
               <div className="flex items-center space-x-2">
@@ -684,10 +777,14 @@ export default function ElianeturismoLanding() {
               <Zap className="w-4 h-4 mr-2" />
               ATENÇÃO: Número Atualizado!
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Novo Número do WhatsApp da Eliane</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Novo Número do WhatsApp da Eliane
+            </h3>
             <p className="text-lg text-gray-600 mb-6">
-              Para melhor atendê-los, a Eliane mudou o número do WhatsApp recentemente.
-              <strong> Salve já o novo número</strong> e continue aproveitando o melhor atendimento em viagens!
+              Para melhor atendê-los, a Eliane mudou o número do WhatsApp
+              recentemente.
+              <strong> Salve já o novo número</strong> e continue aproveitando o
+              melhor atendimento em viagens!
             </p>
             <div className="bg-white rounded-2xl p-6 shadow-lg inline-block">
               <div className="flex items-center justify-center space-x-3 mb-4">
@@ -696,11 +793,15 @@ export default function ElianeturismoLanding() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-gray-500">Novo WhatsApp</p>
-                  <p className="text-xl font-bold text-gray-900">(34) 98888-7777</p>
+                  <p className="text-xl font-bold text-gray-900">
+                    (34) 98888-7777
+                  </p>
                 </div>
               </div>
               <Link
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                  whatsappMessage,
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -716,7 +817,10 @@ export default function ElianeturismoLanding() {
 
       {/* Testimonials Section */}
       {/* Blog Highlights Section */}
-      <section id="blog" className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section
+        id="blog"
+        className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <Badge className="mb-4 bg-purple-100 text-purple-800 px-4 py-2">
@@ -727,8 +831,8 @@ export default function ElianeturismoLanding() {
               Dicas e <span className="text-purple-600">Informações</span> Úteis
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Confira nossos artigos com dicas valiosas sobre destinos, compras e como aproveitar ao máximo suas
-              viagens.
+              Confira nossos artigos com dicas valiosas sobre destinos, compras
+              e como aproveitar ao máximo suas viagens.
             </p>
           </div>
 
@@ -758,8 +862,10 @@ export default function ElianeturismoLanding() {
                     Por que o Brás é o Paraíso das Compras em São Paulo?
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Descubra por que milhares de pessoas viajam todo domingo para o maior centro comercial popular do
-                    Brasil. Preços até 70% menores, variedade incomparável e dicas exclusivas para sua primeira visita.
+                    Descubra por que milhares de pessoas viajam todo domingo
+                    para o maior centro comercial popular do Brasil. Preços até
+                    70% menores, variedade incomparável e dicas exclusivas para
+                    sua primeira visita.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
@@ -801,10 +907,12 @@ export default function ElianeturismoLanding() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Goiânia: O Que Fazer na Capital Goiana</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  Goiânia: O Que Fazer na Capital Goiana
+                </h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Descubra as principais atrações, pontos turísticos e oportunidades de negócio na moderna capital de
-                  Goiás.
+                  Descubra as principais atrações, pontos turísticos e
+                  oportunidades de negócio na moderna capital de Goiás.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-xs text-gray-500">
@@ -834,10 +942,12 @@ export default function ElianeturismoLanding() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Como Organizar Sua Bagagem Para Compras</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  Como Organizar Sua Bagagem Para Compras
+                </h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Dicas práticas para otimizar o espaço, proteger suas compras e trazer mais produtos na viagem de
-                  volta.
+                  Dicas práticas para otimizar o espaço, proteger suas compras e
+                  trazer mais produtos na viagem de volta.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-xs text-gray-500">
@@ -867,9 +977,12 @@ export default function ElianeturismoLanding() {
                 </Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Como Começar um Negócio de Revenda</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  Como Começar um Negócio de Revenda
+                </h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                  Guia completo para empreendedores que querem começar um negócio lucrativo com produtos do Brás.
+                  Guia completo para empreendedores que querem começar um
+                  negócio lucrativo com produtos do Brás.
                 </p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-xs text-gray-500">
@@ -887,10 +1000,14 @@ export default function ElianeturismoLanding() {
 
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Quer mais dicas e informações sobre viagens?</p>
+            <p className="text-gray-600 mb-6">
+              Quer mais dicas e informações sobre viagens?
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá Eliane! Gostaria de receber dicas sobre viagens e destinos.")}`}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                  "Olá Eliane! Gostaria de receber dicas sobre viagens e destinos.",
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -925,8 +1042,8 @@ export default function ElianeturismoLanding() {
               Perguntas <span className="text-orange-600">Frequentes</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Tire suas dúvidas sobre as viagens organizadas pela Eliane. Se não encontrar sua resposta, chame no
-              WhatsApp!
+              Tire suas dúvidas sobre as viagens organizadas pela Eliane. Se não
+              encontrar sua resposta, chame no WhatsApp!
             </p>
           </div>
 
@@ -938,10 +1055,14 @@ export default function ElianeturismoLanding() {
               >
                 <CardContent className="p-0">
                   <button
-                    onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                    onClick={() =>
+                      setExpandedFaq(expandedFaq === index ? null : index)
+                    }
                     className="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                    <span className="font-semibold text-gray-900 pr-4">
+                      {faq.question}
+                    </span>
                     {expandedFaq === index ? (
                       <ChevronUp className="w-5 h-5 text-gray-500 flex-shrink-0" />
                     ) : (
@@ -950,7 +1071,9 @@ export default function ElianeturismoLanding() {
                   </button>
                   {expandedFaq === index && (
                     <div className="px-6 pb-6">
-                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
                     </div>
                   )}
                 </CardContent>
@@ -961,7 +1084,9 @@ export default function ElianeturismoLanding() {
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">Não encontrou sua resposta?</p>
             <Link
-              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá Eliane! Tenho uma dúvida sobre as viagens.")}`}
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                "Olá Eliane! Tenho uma dúvida sobre as viagens.",
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -995,13 +1120,16 @@ export default function ElianeturismoLanding() {
             </h2>
 
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Entre em contato com a <strong>Eliane</strong> pelo WhatsApp agora mesmo. Ela vai organizar sua viagem com
-              todo carinho e profissionalismo que você merece.
+              Entre em contato com a <strong>Eliane</strong> pelo WhatsApp agora
+              mesmo. Ela vai organizar sua viagem com todo carinho e
+              profissionalismo que você merece.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                  whatsappMessage,
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1027,20 +1155,32 @@ export default function ElianeturismoLanding() {
             {/* Trust Indicators */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-white/20">
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">24h</div>
-                <div className="text-sm text-blue-100">Atendimento WhatsApp</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  24h
+                </div>
+                <div className="text-sm text-blue-100">
+                  Atendimento WhatsApp
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">100%</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  100%
+                </div>
                 <div className="text-sm text-blue-100">Seguro e Confiável</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">5+</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  5+
+                </div>
                 <div className="text-sm text-blue-100">Anos de Experiência</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">500+</div>
-                <div className="text-sm text-blue-100">Clientes Satisfeitos</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  500+
+                </div>
+                <div className="text-sm text-blue-100">
+                  Clientes Satisfeitos
+                </div>
               </div>
             </div>
           </div>
@@ -1057,13 +1197,18 @@ export default function ElianeturismoLanding() {
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <span className="text-xl md:text-2xl font-bold">Eliane Turismo</span>
-                  <p className="text-sm text-gray-400">Organizadora de Viagens</p>
+                  <span className="text-xl md:text-2xl font-bold">
+                    Eliane Turismo
+                  </span>
+                  <p className="text-sm text-gray-400">
+                    Organizadora de Viagens
+                  </p>
                 </div>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-                A Eliane organiza suas viagens de Araguari para os principais destinos do Brasil com segurança, conforto
-                e o melhor atendimento via WhatsApp.
+                A Eliane organiza suas viagens de Araguari para os principais
+                destinos do Brasil com segurança, conforto e o melhor
+                atendimento via WhatsApp.
               </p>
               <div className="flex space-x-4">
                 <Link
@@ -1090,7 +1235,9 @@ export default function ElianeturismoLanding() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">Destinos Populares</h3>
+              <h3 className="text-lg font-semibold mb-6 text-white">
+                Destinos Populares
+              </h3>
               <ul className="space-y-3">
                 <li>
                   <Link
@@ -1132,7 +1279,9 @@ export default function ElianeturismoLanding() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-white">Contato Direto</h3>
+              <h3 className="text-lg font-semibold mb-6 text-white">
+                Contato Direto
+              </h3>
               <div className="space-y-4">
                 <Link
                   href={`https://wa.me/${whatsappNumber}`}
@@ -1182,13 +1331,20 @@ export default function ElianeturismoLanding() {
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                &copy; {new Date().getFullYear()} Eliane Turismo. Todos os direitos reservados.
+                &copy; {new Date().getFullYear()} Eliane Turismo. Todos os
+                direitos reservados.
               </p>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <Link href="#" className="hover:text-white transition-colors duration-300">
+                <Link
+                  href="#"
+                  className="hover:text-white transition-colors duration-300"
+                >
                   Política de Privacidade
                 </Link>
-                <Link href="#" className="hover:text-white transition-colors duration-300">
+                <Link
+                  href="#"
+                  className="hover:text-white transition-colors duration-300"
+                >
                   Termos de Uso
                 </Link>
               </div>
@@ -1199,7 +1355,9 @@ export default function ElianeturismoLanding() {
 
       {/* Floating WhatsApp Button */}
       <Link
-        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+          whatsappMessage,
+        )}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 animate-bounce"
@@ -1207,5 +1365,5 @@ export default function ElianeturismoLanding() {
         <MessageCircle className="w-7 h-7 text-white" />
       </Link>
     </div>
-  )
+  );
 }
