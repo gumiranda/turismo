@@ -7,20 +7,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Eliane Turismo - Passagens de Ônibus Araguari | Brás, Mega Moda Goiânia",
+    "Eliane Turismo - Excursões para Brás | Saídas de Araguari, Uberaba, Uberlândia e Ribeirão Preto",
   description:
-    "Viagens de ônibus executivo com Wi-Fi e ar condicionado saindo de Araguari para São Paulo (Brás), Goiânia (Mega Moda) e Monte Sião. Excursões para compras no atacado, moda e malhas. Conforto, segurança e os melhores preços em passagens. Reserve agora!",
+    "Viagens de ônibus executivo com Wi-Fi e ar condicionado saindo de Araguari, Uberaba, Uberlândia e Ribeirão Preto para São Paulo (Brás), Goiânia (Mega Moda) e Monte Sião. Excursões guiadas para compras no atacado, moda e malhas. Conforto, segurança e os melhores preços em passagens. Reserve agora!",
   keywords:
-    "passagens de ônibus Araguari, viagens para Brás São Paulo, excursão Mega Moda Goiânia, Monte Sião malhas, compras atacado Brás, excursão feira da madrugada, turismo de compras, ônibus executivo wifi, viagens seguras, passagens promocionais, excursão para compras, Eliane Turismo",
+    "passagens de ônibus Araguari, viagens Uberaba São Paulo, excursão Uberlândia Brás, viagem Ribeirão Preto Brás, excursão Mega Moda Goiânia, Monte Sião malhas, compras atacado Brás, excursão feira da madrugada, turismo de compras, ônibus executivo wifi, viagens seguras, passagens promocionais, excursão para compras, Eliane Turismo, bate e volta Brás, excursão guiada compras, sacoleiras Brás, lojistas atacado, compras atacadão roupas, feira madrugada Brás, moda feminina atacado, distribuidora roupas atacado, excursão lojistas Brás, excursão sacoleiras São Paulo",
   authors: [{ name: "Eliane Turismo" }],
   creator: "Eliane Turismo",
   publisher: "Eliane Turismo",
   robots: "index, follow",
   openGraph: {
     title:
-      "Eliane Turismo - Passagens de Ônibus Araguari | Brás, Mega Moda Goiânia",
+      "Eliane Turismo - Excursões para Brás | Saídas de Araguari, Uberaba, Uberlândia e Ribeirão Preto",
     description:
-      "Viagens de ônibus executivo com Wi-Fi saindo de Araguari para São Paulo (Brás), Goiânia (Mega Moda). Excursões especializadas para compras no atacado, moda e malhas. Conforto e segurança garantidos!",
+      "Excursões guiadas para compras no Brás, Mega Moda e Monte Sião. Saídas de Araguari, Uberaba, Uberlândia e Ribeirão Preto em ônibus executivo com Wi-Fi. Especialistas em viagens para lojistas e sacoleiras.",
     url: "https://elianeturismo.com.br",
     siteName: "Eliane Turismo",
     locale: "pt_BR",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Eliane Turismo - Passagens de Ônibus para Compras | Brás, Mega Moda Goiânia",
+      "Excursões para Brás e Mega Moda | Saídas do Triângulo Mineiro e Ribeirão Preto",
     description:
-      "Viagens executivas de Araguari para os principais centros de compras: Brás (SP), Mega Moda (Goiânia). Wi-Fi e ar condicionado.",
+      "Viagens guiadas para compras no atacado. Saídas de Araguari, Uberaba, Uberlândia e Ribeirão Preto em ônibus executivo com Wi-Fi e ar condicionado.",
   },
   icons: {
     icon: "/favicon.svg",
