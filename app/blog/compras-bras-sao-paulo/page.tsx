@@ -577,15 +577,6 @@ export default function ComprasBrasArticle() {
                       Informações Sobre Viagens
                     </Button>
                   </Link>
-                  <Link href="/">
-                    <Button
-                      variant="outline"
-                      className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
-                    >
-                      <Home className="w-5 h-5 mr-2" />
-                      Voltar ao Site
-                    </Button>
-                  </Link>
                 </div>
               </div>
             </section>
