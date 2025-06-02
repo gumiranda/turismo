@@ -54,33 +54,6 @@ export default function ElianeturismoLanding() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const testimonials = [
-    {
-      name: "Maria Silva",
-      role: "Empresária",
-      content:
-        "A Eliane é incrível! Sempre organiza as viagens com muito cuidado. Já viajei várias vezes para São Paulo e o atendimento pelo WhatsApp é super rápido e eficiente.",
-      rating: 5,
-      image: "/placeholder.svg?height=60&width=60",
-    },
-    {
-      name: "João Santos",
-      role: "Aposentado",
-      content:
-        "Viajo para Monte Sião todo ano e sempre chamo a Eliane. Ela conhece os melhores horários e sempre consegue um preço justo. Recomendo de olhos fechados!",
-      rating: 5,
-      image: "/placeholder.svg?height=60&width=60",
-    },
-    {
-      name: "Ana Costa",
-      role: "Professora",
-      content:
-        "Organização perfeita! A Eliane cuida de todos os detalhes da viagem. Desde a reserva até o embarque, tudo funciona perfeitamente. Muito profissional!",
-      rating: 5,
-      image: "/placeholder.svg?height=60&width=60",
-    },
-  ];
-
   const faqs = [
     {
       question: "Como faço para reservar uma passagem?",
@@ -279,10 +252,11 @@ export default function ElianeturismoLanding() {
 
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 <strong>Eliane organiza suas viagens</strong> com horários fixos
-                e garantidos: <strong>São Paulo (Brás) todo domingo</strong> e{" "}
-                <strong>Goiânia toda sexta-feira</strong>. Ônibus modernos,
-                lugares garantidos e atendimento personalizado no nosso{" "}
-                <strong>novo número do WhatsApp</strong>.
+                e garantidos:{" "}
+                <strong>São Paulo (Brás) todo domingo 15:30</strong> e{" "}
+                <strong>Goiânia toda sexta-feira 23:30</strong>. Ônibus
+                modernos, lugares garantidos e atendimento personalizado no
+                nosso <strong>novo número do WhatsApp</strong>.
               </p>
 
               {/* Features List */}
@@ -598,7 +572,7 @@ export default function ElianeturismoLanding() {
                     <h4 className="text-xl font-semibold">São Paulo (Brás)</h4>
                   </div>
                   <Badge className="bg-blue-100 text-blue-800">
-                    Todo Domingo
+                    Todo Domingo 15:30
                   </Badge>
                 </div>
                 <div className="space-y-2">
@@ -607,7 +581,7 @@ export default function ElianeturismoLanding() {
                   </p>
                   <p className="text-gray-600">
                     <strong>Parada especial:</strong> Feirinha da Madrugada
-                    (plataforma e2e67)
+                    (Plataforma E2E67)
                   </p>
                   <p className="text-gray-600">
                     <strong>Retorno:</strong> 14:00 do dia seguinte
@@ -640,7 +614,7 @@ export default function ElianeturismoLanding() {
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
               <div className="relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=250&width=400"
+                  src="https://saopauloparacriancas.com.br/wp-content/uploads/2025/01/sp_criancas_praca-monte-siao.jpg"
                   alt="Monte Sião - MG"
                   width={400}
                   height={250}
@@ -688,7 +662,7 @@ export default function ElianeturismoLanding() {
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg">
               <div className="relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=250&width=400"
+                  src="https://f.i.uol.com.br/fotografia/2023/03/29/16801346316424d1e78baa9_1680134631_3x2_md.jpg"
                   alt="São Paulo - Brás"
                   width={400}
                   height={250}
@@ -736,7 +710,7 @@ export default function ElianeturismoLanding() {
             <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white border-0 shadow-lg md:col-span-2 lg:col-span-1">
               <div className="relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=250&width=400"
+                  src="https://curtamais.com.br/goiania/wp-content/uploads/sites/2/2018/12/5e3bc6bd0801978a726d467befb61a34.png"
                   alt="Goiânia - GO"
                   width={400}
                   height={250}
@@ -892,7 +866,7 @@ export default function ElianeturismoLanding() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative">
                   <Image
-                    src="/placeholder.svg?height=300&width=400"
+                    src="https://abcdoabc.com.br/wp-content/uploads/comercio-bras_373c7ad2.jpg"
                     alt="Compras no Brás - São Paulo"
                     width={400}
                     height={300}
@@ -945,7 +919,7 @@ export default function ElianeturismoLanding() {
             <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=350"
+                  src="https://www.goiania.go.gov.br/wp-content/uploads/2019/10/10.28GOIANIAGERAL_PJ-1-1024x569.jpeg"
                   alt="Dicas de viagem para Goiânia"
                   width={350}
                   height={200}
@@ -980,7 +954,7 @@ export default function ElianeturismoLanding() {
             <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=350"
+                  src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/06/esteira-bagagem-capa2019-01.jpg"
                   alt="Como organizar bagagem para compras"
                   width={350}
                   height={200}
@@ -1015,7 +989,7 @@ export default function ElianeturismoLanding() {
             <Card className="bg-white shadow-lg border-0 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=350"
+                  src="https://i.ytimg.com/vi/YaBUwJIdDrM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBH43WH_0D6tqXJwo9ipDnq3uOPrw"
                   alt="Como começar um negócio de revenda"
                   width={350}
                   height={200}
