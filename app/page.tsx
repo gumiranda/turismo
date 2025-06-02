@@ -240,13 +240,13 @@ export default function ElianeturismoLanding() {
               </Badge>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Viaje com a{" "}
+                Viagens de Ônibus Araguari com a{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
-                  Eliane
+                  Eliane Turismo
                 </span>
                 <br />
                 <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700">
-                  Segurança e Conforto Garantidos
+                  São Paulo, Goiânia e Monte Sião
                 </span>
               </h1>
 
@@ -254,9 +254,7 @@ export default function ElianeturismoLanding() {
                 <strong>Eliane organiza suas viagens</strong> com horários fixos
                 e garantidos:{" "}
                 <strong>São Paulo (Brás) todo domingo 15:30</strong> e{" "}
-                <strong>Goiânia toda sexta-feira 23:30</strong>. Ônibus
-                modernos, lugares garantidos e atendimento personalizado no
-                nosso <strong>novo número do WhatsApp</strong>.
+                <strong>Goiânia toda sexta-feira 23:30</strong>.
               </p>
 
               {/* Features List */}
@@ -428,7 +426,8 @@ export default function ElianeturismoLanding() {
               Diferenciais
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Por que escolher a <span className="text-blue-600">Eliane</span>?
+              Viagens de Ônibus Araguari - Por que escolher a{" "}
+              <span className="text-blue-600">Eliane Turismo</span>?
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               A Eliane cuida de todos os detalhes da sua viagem com carinho e
@@ -564,13 +563,7 @@ export default function ElianeturismoLanding() {
                 className="w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                    Viagens para São Paulo
-                  </h3>
-                  <p className="text-gray-200 mb-4">
-                    Descubra as melhores oportunidades de compras no Brás
-                  </p>
+                <div className="absolute top-0 left-0 right-0 p-6">
                   <Link
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                       "Olá Eliane! Vi a promoção para São Paulo e gostaria de mais informações!",
@@ -596,13 +589,7 @@ export default function ElianeturismoLanding() {
                 className="w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                    Viagens para Goiânia
-                  </h3>
-                  <p className="text-gray-200 mb-4">
-                    Explore o Mega Moda Park e as melhores lojas da região
-                  </p>
+                <div className="absolute top-0 left-0 right-0 p-6">
                   <Link
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                       "Olá Eliane! Vi a promoção para Goiânia e gostaria de mais informações!",
@@ -631,7 +618,8 @@ export default function ElianeturismoLanding() {
               Destinos Populares
             </Badge>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Principais <span className="text-green-600">Destinos</span>
+              Destinos de Viagens de Ônibus saindo de{" "}
+              <span className="text-green-600">Araguari</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Partindo de Araguari para os melhores destinos do Brasil. A Eliane
@@ -765,7 +753,7 @@ export default function ElianeturismoLanding() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
                     <Clock className="w-4 h-4" />
-                    <span>Domingos - 6h viagem</span>
+                    <span>Domingos - 15:30</span>
                   </div>
                   <Link
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(

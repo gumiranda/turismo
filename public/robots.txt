@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://elianeturismo.com.br/sitemap.xml
+
+# Disallow admin pages from search engines
+Disallow: /admin/
+
+# Allow important pages
+Allow: /blog/
+Allow: /blog/compras-bras-sao-paulo
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
