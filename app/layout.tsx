@@ -7,20 +7,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "Eliane Turismo - Viagens de Ônibus Araguari | São Paulo, Goiânia, Monte Sião",
+    "Eliane Turismo - Passagens de Ônibus Araguari | Brás, Mega Moda Goiânia",
   description:
-    "Viagens de ônibus confortáveis saindo de Araguari para São Paulo (Brás), Goiânia, Monte Sião. Excursões de compras, turismo e lazer com a melhor empresa de turismo de Araguari. Reserve já!",
+    "Viagens de ônibus executivo com Wi-Fi e ar condicionado saindo de Araguari para São Paulo (Brás), Goiânia (Mega Moda) e Monte Sião. Excursões para compras no atacado, moda e malhas. Conforto, segurança e os melhores preços em passagens. Reserve agora!",
   keywords:
-    "viagens ônibus Araguari, turismo Araguari, excursões São Paulo Brás, viagens Goiânia, Monte Sião turismo, compras São Paulo, ônibus Uberaba Uberlândia, Eliane Turismo, viagens confortáveis",
+    "passagens de ônibus Araguari, viagens para Brás São Paulo, excursão Mega Moda Goiânia, Monte Sião malhas, compras atacado Brás, excursão feira da madrugada, turismo de compras, ônibus executivo wifi, viagens seguras, passagens promocionais, excursão para compras, Eliane Turismo",
   authors: [{ name: "Eliane Turismo" }],
   creator: "Eliane Turismo",
   publisher: "Eliane Turismo",
   robots: "index, follow",
   openGraph: {
     title:
-      "Eliane Turismo - Viagens de Ônibus Araguari | São Paulo, Goiânia, Monte Sião",
+      "Eliane Turismo - Passagens de Ônibus Araguari | Brás, Mega Moda Goiânia",
     description:
-      "Viagens de ônibus confortáveis saindo de Araguari para São Paulo (Brás), Goiânia, Monte Sião. Excursões de compras, turismo e lazer.",
+      "Viagens de ônibus executivo com Wi-Fi saindo de Araguari para São Paulo (Brás), Goiânia (Mega Moda). Excursões especializadas para compras no atacado, moda e malhas. Conforto e segurança garantidos!",
     url: "https://elianeturismo.com.br",
     siteName: "Eliane Turismo",
     locale: "pt_BR",
@@ -28,9 +28,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eliane Turismo - Viagens de Ônibus Araguari",
+    title:
+      "Eliane Turismo - Passagens de Ônibus para Compras | Brás, Mega Moda Goiânia",
     description:
-      "Viagens de ônibus confortáveis saindo de Araguari para São Paulo, Goiânia, Monte Sião.",
+      "Viagens executivas de Araguari para os principais centros de compras: Brás (SP), Mega Moda (Goiânia). Wi-Fi e ar condicionado.",
   },
   icons: {
     icon: "/favicon.svg",

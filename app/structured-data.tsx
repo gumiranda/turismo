@@ -106,13 +106,94 @@ export const structuredData = {
   },
 };
 
-export function StructuredDataScript() {
+export const StructuredDataScript = () => {
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData),
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          name: "Eliane Turismo",
+          description:
+            "Agência de viagens especializada em viagens de ônibus com saídas regulares de Araguari para São Paulo (Brás), Goiânia (Mega Moda). Oferecemos conforto, segurança e os melhores preços em passagens de ônibus.",
+          url: "https://www.elianeturismo.com.br",
+          telephone: "+55-34-99236-9984",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Elias Peixoto, 552",
+            addressLocality: "Araguari",
+            addressRegion: "MG",
+            postalCode: "38440-256",
+            addressCountry: "BR",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: -18.6456,
+            longitude: -48.1934,
+          },
+          sameAs: [
+            "https://www.facebook.com/elianeturismo",
+            "https://www.instagram.com/elianeturismo",
+          ],
+          areaServed: [
+            {
+              "@type": "City",
+              name: "São Paulo",
+              description:
+                "Viagens para o Brás, principal destino de compras em São Paulo",
+            },
+            {
+              "@type": "City",
+              name: "Goiânia",
+              description:
+                "Viagens para o Mega Moda Shopping, centro de moda em Goiânia",
+            },
+            {
+              "@type": "City",
+              name: "Monte Sião",
+              description:
+                "Viagens para o maior polo de tricô e malhas de Minas Gerais",
+            },
+          ],
+          makesOffer: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "TravelAction",
+                name: "Passagens de Ônibus Araguari - São Paulo (Brás)",
+                description:
+                  "Viagens regulares de ônibus executivo com Wi-Fi, ar condicionado e poltronas reclináveis de Araguari para o Brás em São Paulo. Ideal para lojistas e compradores.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "TravelAction",
+                name: "Passagens de Ônibus Araguari - Goiânia (Mega Moda)",
+                description:
+                  "Viagens regulares de ônibus executivo com Wi-Fi, ar condicionado e poltronas reclináveis de Araguari para o Mega Moda em Goiânia. Perfeito para compras no atacado.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "TravelAction",
+                name: "Passagens de Ônibus Araguari - Monte Sião",
+                description:
+                  "Viagens regulares de ônibus executivo com Wi-Fi, ar condicionado e poltronas reclináveis de Araguari para Monte Sião. Excelente para compras de malhas e tricô.",
+              },
+            },
+          ],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "512",
+          },
+          keywords:
+            "passagens de ônibus Araguari, viagens para São Paulo Brás, viagens para Goiânia Mega Moda, viagens para Monte Sião, compras no Brás, excursão para Goiânia, turismo de compras, ônibus executivo, viagens seguras, passagens promocionais",
+        }),
       }}
     />
   );
-}
+};
